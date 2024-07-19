@@ -1,11 +1,14 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import About from "./components/About";
-
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import About from "./components/About";
+import Error from "./components/Error";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./components/Contact";
+import RestaurantMenu from "./components/RestaurantMenu";
+// import Grocery from "./components/Grocery";
+
 
 // const styleCard = {
 //     backgroundColor: "#f0f0f0"
@@ -44,13 +47,18 @@ import Contact from "./components/Contact";
 
 
   
+// *************************Buddling the app***************************
+//Lazy Loading
 
+const Grocery = lazy(() => import("./components/Grocery"))
+
+const About = lazy(()=> import("./components/About"))
 
 const AppLayout =() => {
     return (
         <div className="app">
             <Header/>
-            <Body/>
+            <Outlet/>
         </div>
     )
 };
@@ -59,16 +67,32 @@ const appRouter = createBrowserRouter([
     {
         path: "/",
         element:<AppLayout/>,
+        children:[
+            {
+                path: "/",
+                element:<Body/>
+            },
+            {
+                path:"/about",
+                element:<Suspense fallback="Laoding ...."><About/></Suspense>
+            },
+            {
+                path:"/contact",
+                element:<Contact/>
+            },
+            {
+                path:"/grocery",
+                element:<Suspense fallback={<h1>Loading...</h1>}><Grocery/></Suspense>
+            },
+            {
+                path:"/restaurant/:resid",
+                element:<RestaurantMenu/>
+            }
+        ],
+        errorElement:<Error/>,
     },
-    {
-        path:"/about",
-        element:<About/>
-    },
-    {
-        path:"/contact",
-        element:<Contact/>
-    }
+   
 ])
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+//for routing the page
 root.render(<RouterProvider router={appRouter}/>);
