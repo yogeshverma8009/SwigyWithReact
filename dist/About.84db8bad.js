@@ -618,7 +618,13 @@ var _user = require("./User");
 var _userDefault = parcelHelpers.interopDefault(_user);
 var _userClassJs = require("./UserClass.js");
 var _userClassJsDefault = parcelHelpers.interopDefault(_userClassJs);
+var _userContextJs = require("../utils/UserContext.js");
+var _userContextJsDefault = parcelHelpers.interopDefault(_userContextJs);
+var _react = require("react");
+var _s = $RefreshSig$();
 const About = ()=>{
+    _s();
+    const { loggedInUser } = (0, _react.useContext)((0, _userContextJsDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {
@@ -627,7 +633,27 @@ const About = ()=>{
                 contact: "yogeshverma8009@gmail.com"
             }, void 0, false, {
                 fileName: "src/components/About.js",
-                lineNumber: 6,
+                lineNumber: 9,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextJsDefault.default).Consumer, {
+                    children: ({ loggedInUser })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "font-bold text-xl",
+                            children: loggedInUser
+                        }, void 0, false, {
+                            fileName: "src/components/About.js",
+                            lineNumber: 12,
+                            columnNumber: 42
+                        }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 11,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 10,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassJsDefault.default), {
@@ -636,16 +662,17 @@ const About = ()=>{
                 contact: "yoyoverma183@gmail.com"
             }, void 0, false, {
                 fileName: "src/components/About.js",
-                lineNumber: 9,
+                lineNumber: 16,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/About.js",
-        lineNumber: 5,
+        lineNumber: 8,
         columnNumber: 9
     }, undefined);
 };
+_s(About, "jbx6PUTrYC7XqN7CfzVRGoHVVmo=");
 _c = About;
 exports.default = About;
 var _c;
@@ -656,7 +683,7 @@ $RefreshReg$(_c, "About");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./User":"4iQHT","./UserClass.js":"Vp2Fx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4iQHT":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./User":"4iQHT","./UserClass.js":"Vp2Fx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/UserContext.js":"c5vgB","react":"21dqq"}],"4iQHT":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9c32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

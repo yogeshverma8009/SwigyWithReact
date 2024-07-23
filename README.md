@@ -24,3 +24,13 @@ useEffect()
 -Data Layer (State , Props, Varibales, JAVAscript Code )
 
 # Lifting State UP
+
+# Redux 
+-Management the state
+
+-Install @reduxjs/toolkit and react-redux
+-Build our store
+-Connect our store to our app
+-Slice (cartSlice)
+-Dispatch(Action)
+-Selector
