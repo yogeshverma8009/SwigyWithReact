@@ -34,3 +34,23 @@ useEffect()
 -Slice (cartSlice)
 -Dispatch(Action)
 -Selector
+
+
+# Testing
+
+- Unit Teesting
+- Integration Testing
+- End to End Testing - E2E testing
+
+# Setting UP Testing in our App
+
+-Install React Testing Library
+-Installed Jest
+-Installed Babel Dependencies
+-Configure Babel
+-Configure Parcel Config file to disable dfault babel transpilation
+-Jest Configraution
+-Install JsDom Library
+-Install @babel/preset-react- to make jsx work in test cases
+-Add @babel/preset-react in babel config
+-Install @testing-library/jest-dom

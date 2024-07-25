@@ -1,6 +1,10 @@
 const Contact =()=>{
     return(
-        <h1>Contact </h1>
+        <div>
+            <h1>Yogesh Kumar Verma</h1>
+            <button>Send Me</button>
+            
+        </div>
     )
 }
 
